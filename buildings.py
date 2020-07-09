@@ -8,6 +8,11 @@ class Reader:
 
     @staticmethod
     def read_from_url(url):
+        """
+        Read table to Data_frame and delete useless data
+        :param url: URL
+        :return: Data_Frame 
+        """
         data = pd.read_html(url, attrs={'class': 'wikitable sortable'}, header=1)
         df = data[0]
         df = df.drop('Image', axis=1)
