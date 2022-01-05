@@ -16,9 +16,9 @@ jobs:
         run: echo "$GITHUB_SECRETS"
       - name: Test github
         run: |
-        echo ${{ github.event.commits }}
-        echo ${{ github.workspace }}
-        echo ${{ github.event.before }}
+          echo ${{ github.event.commits }}
+          echo ${{ github.workspace }}
+          echo ${{ github.event.before }}
       - name: Test github 2
         run: |
           echo ${{ github.event.commits.author.email}}
