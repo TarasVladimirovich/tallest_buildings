@@ -15,6 +15,10 @@ jobs:
           GITHUB_SECRETS: ${{ toJson(secrets) }}
         run: echo "$GITHUB_SECRETS"
       - name: Test github
-        run: echo ${{ github.sha }}
+        run: echo ${{ github.event.commits }}
+      - name: Test github 2
+        run: |
+        echo ${{ github.event.commits.author}}
+        echo ${{ github.event.commits.committer}}
 
 
