@@ -18,7 +18,7 @@ jobs:
         run: echo ${{ github.event.commits }}
       - name: Test github 2
         run: |
-        echo ${{ github.event.commits.author}}
-        echo ${{ github.event.commits.committer}}
+          echo ${{ github.event.commits.author}}
+          echo ${{ github.event.commits.committer}}
 
 
