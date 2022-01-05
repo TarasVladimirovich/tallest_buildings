@@ -2,15 +2,17 @@ name: Takkoe
 on: [push, pull_request]
 
 jobs:
-  one:
+  Taras-test:
     runs-on: ubuntu-latest
 #    if: github.event_name == 'push'
     steps:
-      - name: Dump GitHub context
+      - name: Dump GitHub Context
         env:
-          GITHUB_CONTEXT: ${{ toJson(secrets) }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - name: test secrets
-        run: ${{ toJson(secrets) }}
+      - name: Dump GitHub Secrets
+        env:
+          GITHUB_SECRETS: ${{ toJson(secrets) }}
+        run: echo "$GITHUB_SECRETS"
 
 
