@@ -21,7 +21,7 @@ jobs:
           echo ${{ github.event.before }}
       - name: Test github 2
         run: |
-          echo ${{ github.event.commits.author.email}}
+          echo ${{ github.event.commits[0].author.email}}
           echo ${{ github.event.commits[0].committer.email}}
 
 
